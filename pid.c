@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-int main(){
+int pid(){
     printf("parent PID, %d\n",getpid());
     pid_t pid=fork();
 

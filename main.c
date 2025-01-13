@@ -1,6 +1,8 @@
 #include <stdio.h>
 
+int pid();
+
 int main(){
-    printf("hello world");
+    pid();
     return 0;
 }
