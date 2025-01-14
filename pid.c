@@ -7,7 +7,7 @@ int pid(){
     printf("parent PID, %d\n",getpid());
     pid_t pid=fork();
 
-    sleep (10);
+
     if (pid<0){
         perror("fork failed");
     } else if (pid == 0) {
@@ -18,10 +18,7 @@ int pid(){
         exit(0);
 
         }
-     
-    exit(0);
-
-    
+    return 0;
 }
 
 
