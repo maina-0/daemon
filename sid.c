@@ -15,7 +15,7 @@ int sid(){
 
     else if (sid==getpid()){
         printf("new session created %d\n", sid);
-        exit(0);
+        
     }
     return 0;
 }
