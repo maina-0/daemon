@@ -12,20 +12,24 @@ int main(){
     pid();
     umask(0);
     sid();
- //   close(STDIN_FILENO);
- //   close(STDOUT_FILENO);
- //   close(STDERR_FILENO);
 
-    if (signal(SIGINT,sig)==SIG_ERR){
-        perror("an error occurred, didn't quite catch your signal:");
-        exit(1);
-    }
+  //  close(STDERR_FILENO);
+    //close(STDIN_FILENO);
+  //  close(STDOUT_FILENO);
+    
+    printf("hello");
 
-     while (1) {
+   
+
+    while (1) {
+        if (signal(SIGINT, sig) == SIG_ERR) {
+            perror("Signal registration failed");
+            exit(EXIT_FAILURE);
+        }
         sleep(1);
     }
 
-
-
     return 0;
 }
+
+
